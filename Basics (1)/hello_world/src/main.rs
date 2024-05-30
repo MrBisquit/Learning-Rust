@@ -1,7 +1,10 @@
 use std::{cmp::Ordering, io};
 use rand::Rng;
+mod maths;
 
 fn main() {
+    do_some_maths();
+
     let secret_number = rand::thread_rng().gen_range(1..=100);
 
     println!("Guess the number");
@@ -39,4 +42,17 @@ fn main() {
             }
         }
     }
-}//
+}
+
+fn do_some_maths() {
+    let added: i32 = maths::add(10, 10);
+    println!("10 + 10 = {added}");
+    let takenaway: i32 = maths::takeaway(10, 5);
+    println!("10 - 5  = {takenaway}");
+    let multiplied: i32 = maths::multiply(10, 10);
+    println!("10 * 10 = {multiplied}");
+    let divided: i32 = maths::divide(10, 5);
+    println!("10 / 5  = {divided}");
+    let powered: i32 = maths::power(10, 5);
+    println!("10 ^ 5  = {powered}");
+}
