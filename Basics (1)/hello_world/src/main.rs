@@ -52,8 +52,9 @@ fn main() {
         }
 
         last = auto_guess::Guess(last, input, max);
+        print!("\rGuess no. {rounds}: {last}");
     }
-    println!("It guessed correctly ({last}) in {rounds} rounds!");
+    println!("\nIt guessed correctly ({last}) in {rounds} rounds!");
 
     loop {
         println!("Your guess: ");
