@@ -5,3 +5,4 @@ edition = "2021"
 
 [dependencies]
 fltk = "1.4.30"
+fltk-theme = "0.7.2"
